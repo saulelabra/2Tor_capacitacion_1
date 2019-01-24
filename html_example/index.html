@@ -8,38 +8,27 @@
                 margin:0;
             }
 
+            .capitalized{
+                text-transform: uppercase;
+            }
+
             .inline, .col-2, .col-3
             {
                 display: inline-block;
             }
 
-            #menu
-            {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-            }
-
-            #menu, #menu div
-            {
-                
-            }
-
-            #menu div ul
-            {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-evenly;
-                list-style-type: none;
+            .hauto, .hauto div{
+                height:auto;
+                min-height:0;
             }
             
-            div
+            /*div
             {
                 border:1px solid black;
                 background-color: rgba(0,0,0,.2);
                 min-height: 300px;
                 vertical-align: top;
-            }
+            }*/
 
             .col-2
             {
@@ -56,10 +45,17 @@
                 height: auto;
             }
 
+            .aligned{
+                display: flex;
+                justify-content: space-between; 
+                padding-left: 18%;
+                padding-right: 18%;
+            }
+
             #portada
             {
-                background-image: url("./large.jpg");
-                height:80vh;
+                background-image: linear-gradient(rgba(19, 18, 26, 0.5),rgba(19, 18, 26, 0.5)), url("./large.jpg");
+                height:90vh;
                 background-attachment: fixed;
                 background-position: center;
                 background-repeat: no-repeat;
@@ -68,51 +64,91 @@
                 display:flex;
                 flex-direction: column;
                 justify-content: center;
-                
+
+                color: white;
             }
+
             #portada h1, #portada h2
             {
                 text-align: center;
             }
 
-            #build
-            {
-                height: 600px;
-            }
-
-            #build h3
-            {
-
-            }
-
-            #build .title
-            {
-
-            }
-            
-            .hauto, .hauto div{
-                height:auto;
-                min-height:0;
-            }
-
             img{
                 width: 100%;
+                object-fit: cover;
+            }
+
+            #menu
+            {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                background-color: rgb(19, 18, 26);
+                color: white;
+            }
+
+            #menu div ul
+            {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                list-style-type: none;
             }
 
             #logo{
-                width: 20vw;
-                padding: 3%
+                width: 12vw;
+                padding-top: 5%;
+                padding-bottom: 5%;
+            }
+
+            #stripes div{
+                display: flex;
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 300px;
+
+                color: white;
+                padding-top: 1em;
+                padding-bottom: 1em;
+
+                align-items: center;
+            }         
+
+            #architecture{
+                background-image: linear-gradient(to right,rgb(41, 39, 54) 25%,rgba(24, 23, 32, 0.2)), url(./architecture.jpg);
+            }
+
+            #interior-design{
+                background-image: linear-gradient(to right,rgb(41, 39, 54) 25%,rgba(24, 23, 32, 0.2)), url(./interior-design.jpg);
+            }
+
+            #landscape{
+                background-image: linear-gradient(to right,rgb(41, 39, 54) 25%,rgba(24, 23, 32, 0.2)), url(./landscape.jpg);
+            }
+
+            #engineering{
+                background-image: linear-gradient(to right,rgb(41, 39, 54) 25%,rgba(24, 23, 32, 0.2)), url(./engineering.jpg);
+            }
+
+            #project-management{
+                background-image: linear-gradient(to right,rgb(41, 39, 54) 25%,rgba(24, 23, 32, 0.2)), url(./project-management.jpg);
+            }
+
+            .imgElements{
+                height: 30vh;                
             }
         </style>
     </head>
     <body>
         <div id="portada">
             <div class="hauto">
-                <h1>AVADA ARCHITECTURE</h1>
+                <h1 class="capitalized">avada architecture</h1>
                 <h2>Concept to Creation - Perfect Form & Function</h2>
             </div>
         </div>
-        <div id="menu" class="hauto">
+        <div id="menu" class="hauto aligned">
             <div class="col-2">
                 <img id="logo" src="logo.webp"/>
             </div>
@@ -127,14 +163,14 @@
                 </ul>
             </div>
         </div>
-        <div id="buildyoa">
+        <div id="buildyoa" class="aligned">
             <div class="col-3">
                 <h3>Build your own Avada</h3>
                 <p>
                         Avada & Avada create exceptional properties, including residential and commercial developments.
                 </p>
             </div>
-            <div class="col-3 section">
+            <div class="col-3">
                 <img src="home-image1.webp" style="display: flex;"/>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce odio tellus, ullamcorper id tempor in, hendrerit ut nulla. Maecenas dignissim tellus at quam interdum tempus.
@@ -151,25 +187,25 @@
             </div>
         </div>
         <div id="stripes">
-            <div>
-                <p>Architecture</p>
+            <div id="architecture" class="aligned">
+                <h2 class="capitalized">Architecture</h2>
             </div>
-            <div>
-                <p>Interior Design</p>
+            <div id="interior-design" class="aligned">
+                <h2 class="capitalized">Interior Design</h2>
             </div>
-            <div>
-                <p>Landscape</p>
+            <div id="landscape" class="aligned">
+                <h2 class="capitalized">Landscape</h2>
             </div>
-            <div>
-                <p>Engineering</p>
+            <div id="engineering" class="aligned">
+                <h2 class="capitalized">Engineering</h2>
             </div>
-            <div>
-                <p>Project Management</p>
+            <div id="project-management" class="aligned">
+                <h2 class="capitalized">Project Management</h2>
             </div>
         </div>
-        <div id="recent-projects">
+        <div id="recent-projects" class="aligned">
             <div class="col-2">
-                <p>Recent Projects</p>
+                <h2 class="capitalized">Recent Projects</h2>
             </div>
             <div class="col-2">
                 <p>
@@ -178,15 +214,27 @@
             </div>
         </div>
         <div id="images">
-            <div>
-                <div class="col-3"></div>
-                <div class="col-3"></div>
-                <div class="col-3"></div>
+            <div class="aligned">
+                <div class="col-3 imgElements">
+                    <img src="img1.jpg"/>
+                </div>
+                <div class="col-3 imgElements">
+                    <img src="img2.jpg"/>
+                </div>
+                <div class="col-3 imgElements">
+                    <img src="img3.jpg"/>
+                </div>
             </div>
-            <div>
-                <div class="col-3"></div>
-                <div class="col-3"></div>
-                <div class="col-3"></div>
+            <div class="aligned">
+                <div class="col-3 imgElements">
+                    <img src="img4.jpg"/>
+                </div>
+                <div class="col-3 imgElements">
+                    <img src="img5.jpg"/>
+                </div>
+                <div class="col-3 imgElements">
+                    <img src="img6.jpg"/>
+                </div>
             </div>
         </div>
         <div id="get-in-touch">
