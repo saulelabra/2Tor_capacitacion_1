@@ -2,6 +2,7 @@
 <html>
     <title>Ejemplo</title>
     <head>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
         <style>
             body
             {
@@ -52,9 +53,21 @@
                 padding-right: 18%;
             }
 
+
+
+            .justify-left{
+                display: flex;
+                justify-content: flex-start;
+            }
+
+            .justify-right{
+                display: flex;
+                justify-content: flex-end;
+            }
+
             #portada
             {
-                background-image: linear-gradient(rgba(19, 18, 26, 0.5),rgba(19, 18, 26, 0.5)), url("./large.jpg");
+                background-image: linear-gradient(rgba(19, 18, 26, 0.5),rgba(19, 18, 26, 0.5)), url("https://avada.theme-fusion.com/architecture/wp-content/uploads/sites/21/2015/02/home-slide.jpg");
                 height:90vh;
                 background-attachment: fixed;
                 background-position: center;
@@ -85,7 +98,7 @@
                 justify-content: space-between;
 
                 background-color: rgb(19, 18, 26);
-                color: white;
+                color: white; 
             }
 
             #menu div ul
@@ -117,28 +130,70 @@
             }         
 
             #architecture{
-                background-image: linear-gradient(to right,rgb(41, 39, 54) 25%,rgba(24, 23, 32, 0.2)), url(./architecture.jpg);
+                background-image: linear-gradient(to right,rgb(41, 39, 54) 25%,rgba(24, 23, 32, 0.2)), url("https://avada.theme-fusion.com/architecture/wp-content/uploads/sites/21/2015/02/home-section1.jpg");
             }
 
             #interior-design{
-                background-image: linear-gradient(to right,rgb(41, 39, 54) 25%,rgba(24, 23, 32, 0.2)), url(./interior-design.jpg);
+                background-image: linear-gradient(to right,rgb(41, 39, 54) 25%,rgba(24, 23, 32, 0.2)), url("https://avada.theme-fusion.com/architecture/wp-content/uploads/sites/21/2015/02/home-section2.jpg");
             }
 
             #landscape{
-                background-image: linear-gradient(to right,rgb(41, 39, 54) 25%,rgba(24, 23, 32, 0.2)), url(./landscape.jpg);
+                background-image: linear-gradient(to right,rgb(41, 39, 54) 25%,rgba(24, 23, 32, 0.2)), url("https://avada.theme-fusion.com/architecture/wp-content/uploads/sites/21/2015/02/home-section3.jpg");
             }
 
             #engineering{
-                background-image: linear-gradient(to right,rgb(41, 39, 54) 25%,rgba(24, 23, 32, 0.2)), url(./engineering.jpg);
+                background-image: linear-gradient(to right,rgb(41, 39, 54) 25%,rgba(24, 23, 32, 0.2)), url("https://avada.theme-fusion.com/architecture/wp-content/uploads/sites/21/2015/02/home-section4.jpg")
             }
 
             #project-management{
-                background-image: linear-gradient(to right,rgb(41, 39, 54) 25%,rgba(24, 23, 32, 0.2)), url(./project-management.jpg);
+                background-image: linear-gradient(to right,rgb(41, 39, 54) 25%,rgba(24, 23, 32, 0.2)), url("https://avada.theme-fusion.com/architecture/wp-content/uploads/sites/21/2015/02/home-section5.jpg");
             }
 
             .imgElements{
                 height: 30vh;                
             }
+
+            #get-in-touch{
+                height: 145px;
+                background-color: rgb(27, 25, 37);
+            }
+
+            #get-in-touch div{
+                display: flex;
+                align-items: center;
+            }
+
+            #foot{
+                height: 70px;
+                background-color: rgb(37, 35, 46);
+            }
+
+            .sMedButt{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 45px;
+                width: 45px;
+                border-radius: 50%;
+                
+                background-color: rgb(37, 35, 46);
+                border: none;
+                color: white;
+                font-size: 16px;
+
+                margin: 5px;
+            }
+
+            .darkButt{
+                background-color: rgb(37, 35, 46);
+                color: #828c8e;
+                border: none;
+                border-radius: 5%;
+                font-size: 16px;
+
+                padding: 15px;
+            }
+
         </style>
     </head>
     <body>
@@ -237,11 +292,18 @@
                 </div>
             </div>
         </div>
-        <div id="get-in-touch">
-            <div class="col-2"></div>
-            <div class="col-2"></div>
+        <div id="get-in-touch" class="aligned">
+            <div class="col-2 justify-left">
+                <a class="sMedButt" href="#"><i class="fab fa-facebook-f"></i></a>
+                <a class="sMedButt" href="#"><i class="fab fa-twitter"></i></a>
+                <a class="sMedButt" href="#"><i class="fas fa-rss"></i></a>
+                <a class="sMedButt" href="#"><i class="fab fa-linkedin-in"></i></a>  
+            </div>
+            <div class="col-2 justify-right">
+                <input type="button" class="darkButt " value="Get In Touch"/>
+            </div>
         </div>
-        <div id="foot">
+        <div id="foot" class="aligned">
 
         </div>
     </body>
