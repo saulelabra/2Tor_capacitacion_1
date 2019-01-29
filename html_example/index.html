@@ -4,6 +4,26 @@
     <head>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
         <style>
+            @font-face{
+                font-family: 'Raleway';
+                src: url("raleway_medium_reg.ttf");
+            }
+
+            @font-face{
+                font-family: 'PT-Sans';
+                src: url("PT-Sans-Reg.ttf");
+            }
+
+            @font-face{
+                font-family: 'Montserrat';
+                src: url("Montserrat-Reg.ttf")
+            }
+
+            @font-face{
+                font-family: 'Open-Sans';
+                src: url("open-sans-Reg.ttf");
+            }
+
             body
             {
                 margin:0;
@@ -40,6 +60,10 @@
             {
                 width: 32%;
             }
+
+            .col-3-2{
+                width: 66%;
+            }
             
             .auto
             {
@@ -53,8 +77,6 @@
                 padding-right: 18%;
             }
 
-
-
             .justify-left{
                 display: flex;
                 justify-content: flex-start;
@@ -65,9 +87,40 @@
                 justify-content: flex-end;
             }
 
+            .full-container{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .text-color-333
+            {
+                color: #333;
+            }
+
+            .text-color-5a5d62{
+                color: #5a5d62;
+            }
+
+            .background-color-getintouch{
+                background-color: #24272d;
+            }
+
+            .background-color-333{
+                background-color: #333;
+            }
+
+            .background-color-5a5d62{
+                background-color: #5a5d62;
+            }
+
+            .background-color-footer{
+                background-color: #282a2b;
+            }
+
             #portada
             {
-                background-image: linear-gradient(rgba(19, 18, 26, 0.5),rgba(19, 18, 26, 0.5)), url("https://avada.theme-fusion.com/architecture/wp-content/uploads/sites/21/2015/02/home-slide.jpg");
+                background-image: linear-gradient(rgba(19, 18, 26, 0.1),rgba(19, 18, 26, 0.1)), url("https://avada.theme-fusion.com/architecture/wp-content/uploads/sites/21/2015/02/home-slide.jpg");
                 height:90vh;
                 background-attachment: fixed;
                 background-position: center;
@@ -84,6 +137,20 @@
             #portada h1, #portada h2
             {
                 text-align: center;
+            }
+
+            #portada h1{
+                font-size: 70px;
+                font-family: Raleway;
+                font-weight: 500;
+                margin:0;
+            }
+
+            #portada h2{
+                font-family: Raleway;
+                font-size: 24px;
+                font-weight: 500;
+                letter-spacing: 2px;
             }
 
             img{
@@ -107,12 +174,48 @@
                 flex-direction: row;
                 justify-content: space-between;
                 list-style-type: none;
+
+                font-family: Montserrat;
+                font-size: 14px;
+                font-weight: 400;
             }
 
             #logo{
                 width: 12vw;
                 padding-top: 5%;
                 padding-bottom: 5%;
+            }
+
+            #buildyoa{
+                padding-top: 105px;
+                padding-bottom: 105px;
+            }
+
+            #buildyoa div h2{
+                font-family: Raleway;
+                font-weight: 500;
+                line-height: 1.25;
+                font-size: 48px;
+                line-height: 60px;
+
+                text-transform: uppercase;
+            }
+
+            #buildyoa div h3{
+                font-family: Raleway;
+                font-weight: 500;
+                line-height: 1.91;
+                font-style: italic;
+            }
+
+            #buildyoa div p{
+                font-family: Open-Sans;
+                font-weight: 400;
+                line-height: 35px;
+            }
+
+            #buildyoa img{
+                width: 90%;
             }
 
             #stripes div{
@@ -127,35 +230,80 @@
                 padding-bottom: 1em;
 
                 align-items: center;
+            }
+
+            #stripes div h2{
+                font-family: Raleway;
+                font-size: 30px;
+                letter-spacing: 2px;
+                line-height: 2.11;
+                font-weight: 100;
             }         
 
             #architecture{
-                background-image: linear-gradient(to right,rgb(41, 39, 54) 25%,rgba(24, 23, 32, 0.2)), url("https://avada.theme-fusion.com/architecture/wp-content/uploads/sites/21/2015/02/home-section1.jpg");
+                background-image: linear-gradient(to right,rgba(48, 45, 63, 0.2) 5%,rgba(118, 113, 155, 0)), url("https://avada.theme-fusion.com/architecture/wp-content/uploads/sites/21/2015/02/home-section1.jpg");
             }
 
             #interior-design{
-                background-image: linear-gradient(to right,rgb(41, 39, 54) 25%,rgba(24, 23, 32, 0.2)), url("https://avada.theme-fusion.com/architecture/wp-content/uploads/sites/21/2015/02/home-section2.jpg");
+                background-image: linear-gradient(to right,rgba(48, 45, 63, 0.2) 5%,rgba(118, 113, 155, 0)), url("https://avada.theme-fusion.com/architecture/wp-content/uploads/sites/21/2015/02/home-section2.jpg");
             }
 
             #landscape{
-                background-image: linear-gradient(to right,rgb(41, 39, 54) 25%,rgba(24, 23, 32, 0.2)), url("https://avada.theme-fusion.com/architecture/wp-content/uploads/sites/21/2015/02/home-section3.jpg");
+                background-image: linear-gradient(to right,rgba(48, 45, 63, 0.2) 5%,rgba(118, 113, 155, 0)), url("https://avada.theme-fusion.com/architecture/wp-content/uploads/sites/21/2015/02/home-section3.jpg");
             }
 
             #engineering{
-                background-image: linear-gradient(to right,rgb(41, 39, 54) 25%,rgba(24, 23, 32, 0.2)), url("https://avada.theme-fusion.com/architecture/wp-content/uploads/sites/21/2015/02/home-section4.jpg")
+                background-image: linear-gradient(to right,rgba(48, 45, 63, 0.2) 5%,rgba(118, 113, 155, 0)), url("https://avada.theme-fusion.com/architecture/wp-content/uploads/sites/21/2015/02/home-section4.jpg")
             }
 
             #project-management{
-                background-image: linear-gradient(to right,rgb(41, 39, 54) 25%,rgba(24, 23, 32, 0.2)), url("https://avada.theme-fusion.com/architecture/wp-content/uploads/sites/21/2015/02/home-section5.jpg");
+                background-image: linear-gradient(to right,rgba(48, 45, 63, 0.2) 5%,rgba(118, 113, 155, 0)), url("https://avada.theme-fusion.com/architecture/wp-content/uploads/sites/21/2015/02/home-section5.jpg");
+            }
+
+            #recent-projects{
+                margin-top: 15vh;
+                margin-bottom: 15vh;
+            }
+
+            #recent-projects-title-div{
+                width: 31%;
+
+                text-transform: uppercase;
+            }
+
+            #recent-projects-title-div h2{
+                font-family: Raleway;
+                font-size: 48px;
+                font-weight: 500;
+                letter-spacing: 2px;
+                line-height: 60px;
+                margin: 0;
+
+                border-style: none solid none none;
+                border-right-color: #a4afb1;
+                border-width: 3px;
+            }
+
+            .italics-subtitle{
+                font-family: Raleway;
+                font-size: 22px;
+                font-weight: 500;
+                line-height: 1.91;
+                font-style: italic;
+            }
+
+            #images{
+                margin-bottom: 18vh;
             }
 
             .imgElements{
-                height: 30vh;                
+                height: 25vh;
+                margin-bottom: 3vh;
+                object-fit: cover;                
             }
 
             #get-in-touch{
                 height: 145px;
-                background-color: rgb(27, 25, 37);
             }
 
             #get-in-touch div{
@@ -212,7 +360,7 @@
                     <li>Home</li>
                     <li>About</li>
                     <li>Services</li>
-                    <li>Our work</li>
+                    <li>Our Work</li>
                     <li>News</li>
                     <li>Contact</li>
                 </ul>
@@ -220,10 +368,10 @@
         </div>
         <div id="buildyoa" class="aligned">
             <div class="col-3">
-                <h3>Build your own Avada</h3>
-                <p>
+                <h2>Build your Avada</h2>
+                <h3>
                         Avada & Avada create exceptional properties, including residential and commercial developments.
-                </p>
+                </h3>
             </div>
             <div class="col-3">
                 <img src="home-image1.webp" style="display: flex;"/>
@@ -259,10 +407,10 @@
             </div>
         </div>
         <div id="recent-projects" class="aligned">
-            <div class="col-2">
-                <h2 class="capitalized">Recent Projects</h2>
+            <div id="recent-projects-title-div" class="text-color-333">
+                <h2 class="capitalized">Recent <br> Projects</h2>
             </div>
-            <div class="col-2">
+            <div class="col-3-2 text-color-5a5d62 italics-subtitle">
                 <p>
                     Avada & Avada is an award winning company with a reputation for consistent innovation at the highest level of design.
                 </p>
@@ -271,28 +419,28 @@
         <div id="images">
             <div class="aligned">
                 <div class="col-3 imgElements">
-                    <img src="img1.jpg"/>
+                    <img src="img1.jpg" class="full-container"/>
                 </div>
                 <div class="col-3 imgElements">
-                    <img src="img2.jpg"/>
+                    <img src="img2.jpg" class="full-container"/>
                 </div>
                 <div class="col-3 imgElements">
-                    <img src="img3.jpg"/>
+                    <img src="img3.jpg" class="full-container"/>
                 </div>
             </div>
             <div class="aligned">
                 <div class="col-3 imgElements">
-                    <img src="img4.jpg"/>
+                    <img src="img4.jpg" class="full-container"/>
                 </div>
                 <div class="col-3 imgElements">
-                    <img src="img5.jpg"/>
+                    <img src="img5.jpg" class="full-container"/>
                 </div>
                 <div class="col-3 imgElements">
-                    <img src="img6.jpg"/>
+                    <img src="img6.jpg" class="full-container"/>
                 </div>
             </div>
         </div>
-        <div id="get-in-touch" class="aligned">
+        <div id="get-in-touch" class="aligned background-color-getintouch">
             <div class="col-2 justify-left">
                 <a class="sMedButt" href="#"><i class="fab fa-facebook-f"></i></a>
                 <a class="sMedButt" href="#"><i class="fab fa-twitter"></i></a>
@@ -303,7 +451,7 @@
                 <input type="button" class="darkButt " value="Get In Touch"/>
             </div>
         </div>
-        <div id="foot" class="aligned">
+        <div id="foot" class="aligned background-color-footer">
 
         </div>
     </body>
