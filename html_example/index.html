@@ -93,6 +93,10 @@
                 object-fit: cover;
             }
 
+            a:link{
+                text-decoration: none;
+            }
+
             .text-color-333
             {
                 color: #333;
@@ -299,7 +303,74 @@
             .imgElements{
                 height: 25vh;
                 margin-bottom: 3vh;
-                object-fit: cover;                
+                object-fit: cover;
+
+                position: relative; 
+                overflow: hidden;
+            }
+
+            .imgElements:hover .cover{
+                bottom: 0px;
+            }
+
+            .cover{
+                /*display: flex;
+                object-fit: cover;*/
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+
+                height: 100%;
+                width: 100%;
+
+                position: absolute;
+                bottom: -100%;
+                background-color: #7576a0e0;
+                z-index: 2;
+
+                transition: bottom 0.3s;
+            }
+
+            .cover-info{
+                display:flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                height: 45%;
+                width: 90%;
+            }
+
+            .cover-btns{
+                display: flex;
+                align-items: center;
+                margin-bottom: 3%;
+            }
+
+            .cover-btn{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 45px;
+                width: 45px;
+                border-radius: 50%;
+                
+                background-color: rgb(37, 35, 46);
+                border: none;
+                color: white;
+                font-size: 16px;
+
+                margin: 5px;
+            }
+
+            .cover-text h4{
+                color:  rgb(37, 35, 46);
+                margin: 0;
+                font-family: Open-Sans;
+                font-weight: 400;
+                letter-spacing: 0;
             }
 
             #get-in-touch{
@@ -420,23 +491,89 @@
             <div class="aligned">
                 <div class="col-3 imgElements">
                     <img src="img1.jpg" class="full-container"/>
+                    <div class="cover">
+                        <div class="cover-info">
+                            <div class="cover-btns">
+                                <a class="cover-btn" href="#"><i class="fas fa-link"></i></a>
+                                <a class="cover-btn" href="#"><i class="fas fa-search"></i></a>
+                            </div>
+                            <div class="cover-text">
+                                <h4>Sunrise Avenue</h4>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-3 imgElements">
                     <img src="img2.jpg" class="full-container"/>
+                    <div class="cover">
+                        <div class="cover-info">
+                            <div class="cover-btns">
+                                <a class="cover-btn" href="#"><i class="fas fa-link"></i></a>
+                                <a class="cover-btn" href="#"><i class="fas fa-search"></i></a>
+                            </div>
+                            <div class="cover-text">
+                                <h4>Singapore Skyrise</h4>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-3 imgElements">
                     <img src="img3.jpg" class="full-container"/>
+                    <div class="cover">
+                        <div class="cover-info">
+                            <div class="cover-btns">
+                                <a class="cover-btn" href="#"><i class="fas fa-link"></i></a>
+                                <a class="cover-btn" href="#"><i class="fas fa-search"></i></a>
+                            </div>
+                            <div class="cover-text">
+                                <h4>St Lucia Sunsets</h4>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="aligned">
                 <div class="col-3 imgElements">
                     <img src="img4.jpg" class="full-container"/>
+                    <div class="cover">
+                        <div class="cover-info">
+                            <div class="cover-btns">
+                                <a class="cover-btn" href="#"><i class="fas fa-link"></i></a>
+                                <a class="cover-btn" href="#"><i class="fas fa-search"></i></a>
+                            </div>
+                            <div class="cover-text">
+                                <h4>Danish Modernity</h4>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-3 imgElements">
                     <img src="img5.jpg" class="full-container"/>
+                    <div class="cover">
+                        <div class="cover-info">
+                            <div class="cover-btns">
+                                <a class="cover-btn" href="#"><i class="fas fa-link"></i></a>
+                                <a class="cover-btn" href="#"><i class="fas fa-search"></i></a>
+                            </div>
+                            <div class="cover-text">
+                                <h4>West Shinjuku</h4>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-3 imgElements">
                     <img src="img6.jpg" class="full-container"/>
+                    <div class="cover">
+                        <div class="cover-info">
+                            <div class="cover-btns">
+                                <a class="cover-btn" href="#"><i class="fas fa-link"></i></a>
+                                <a class="cover-btn" href="#"><i class="fas fa-search"></i></a>
+                            </div>
+                            <div class="cover-text">
+                                <h4>Manchester Airport</h4>
+                            </div>
+                        </div> 
+                    </div>
                 </div>
             </div>
         </div>
