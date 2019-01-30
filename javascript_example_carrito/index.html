@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Carrito</title>
+        
+        <script type="text/javascript">
+            
+            //Array with available products
+            var dataObj = [
+                {art: "pluma", price: "6"},
+                {art: "lapiz", price: "4"},
+                {art: "goma", price: "7"}
+            ];
+
+            //Object to contain cart elements
+            var cartObj = {};
+
+            //Function to append elements to the cart
+            function addToCart(article)
+            {
+                cartObj += article;
+            }
+
+            //Function to generate available product
+            function genAvailArticle(dataIndex)
+            {
+                //Markup template for available article
+                const itemStruct = `
+                    <div>
+                        <ul>
+                            <li>${dataObj[dataIndex].art}</li>
+                            <li>${dataObj[dataIndex].price}</li>
+                            <input type="button" value="Agregar" onclick="addToCart(${dataObj[dataIndex]})">
+                        </ul>
+                    </div>
+                `;
+
+                document.getElementById("products-env").innerHTML += itemStruct;
+                return;
+            }
+
+            /*//Function to generate cart articles
+            function genCartArt(){
+                //Markup template for cart article
+                const itemStruct = `
+                    <div>
+                        <ul>
+                            <li>$
+                `;
+            }*/
+
+            function setup()
+            {
+                for(var i in dataObj)
+                    genAvailArticle(i);
+            }
+        </script>
+
+        <style>
+            #products{
+                height: 70vh;
+                width: 60vw;
+                margin: 2%;
+            }
+
+            #products-env div{
+                height:10%;
+                margin:0;
+            }
+
+            #products-env div ul li{
+                display: inline;
+            }
+
+            #cart{
+                height: 70vh;
+                width: 30vw;
+                margin: 2%;
+            } 
+
+            .background-color-aqua{
+                background-color: rgb(255, 141, 65);
+                border-width: 1px;
+            }
+
+            .display-flex-row-center{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                align-content: center;
+                justify-content: center;
+            }
+
+            .dynamic-obj-container{
+                background-color: white;
+                height: 80%;
+                width: 90%;
+            }
+
+            .card-flex-container{
+                height: 90%;
+                width: 100%;
+            }
+        </style>
+    </head>
+
+    <body onload="setup()">
+        <h1>Tienda en línea</h1>
+        <div class="display-flex-row-center">
+            <div id="products" class="background-color-aqua">
+                <h2>Productos</h2>
+                <div class="display-flex-row-center card-flex-container">
+                    <div id="products-env" class="dynamic-obj-container">
+
+                    </div>
+                </div>
+            </div>
+            <div id="cart" class="background-color-aqua">
+                <h2>Carrito</h2>
+                <div class="display-flex-row-center card-flex-container">
+                    <div id="cart-env" class="dynamic-obj-container">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
