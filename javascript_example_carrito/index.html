@@ -13,12 +13,15 @@
             ];
 
             //Object to contain cart elements
-            var cartObj = {};
+            var cartObj = [];
 
             //Function to append elements to the cart
-            function addToCart(article)
+            function addToCart(article, dataIndex)
             {
-                cartObj += article;
+                var articleNew = {Artindex: dataIndex, art: article.art, price: article.price};
+
+                cartObj.push(articleNew);
+                genCart();
             }
 
             //Function to generate available product
@@ -30,7 +33,7 @@
                         <ul>
                             <li>${dataObj[dataIndex].art}</li>
                             <li>${dataObj[dataIndex].price}</li>
-                            <input type="button" value="Agregar" onclick="addToCart(${dataObj[dataIndex]})">
+                            <input type="button" value="Agregar" onclick="addToCart(${dataObj[dataIndex]}, ${dataIndex})">
                         </ul>
                     </div>
                 `;
@@ -39,20 +42,38 @@
                 return;
             }
 
-            /*//Function to generate cart articles
-            function genCartArt(){
+            //Function to generate cart articles
+            function genCartArt(article){
                 //Markup template for cart article
                 const itemStruct = `
                     <div>
                         <ul>
-                            <li>$
+                            <li>${article.art}</li>
+                            <li>${article.price}</li>
+                        </ul>
+                    </div>
                 `;
-            }*/
 
-            function setup()
+                document.getElementById("cart-env").innerHTML += itemStruct;
+                return;
+            }
+
+            function genAvArticles()
             {
                 for(var i in dataObj)
                     genAvailArticle(i);
+            }
+
+            function genCart()
+            {               
+                for(var i in cartObj)
+                    genCartArt(i);
+            }
+
+            function setup()
+            {
+                genAvArticles();
+                genCart();
             }
         </script>
 
